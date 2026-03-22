@@ -23,15 +23,14 @@ export default function Home() { // State to hold the datasets and loading statu
     return <div>Fetching Data...</div>
   }
   const filteredDatasets = searchDatasets(datasets, search) // Filter datasets based on search query
-  console.log(filteredDatasets)
+  
 
   return ( // Render the datasets in a table format HTML structure
     
     <main className="min-h-screen bg-white-500 p-8 text-slate-900">
-      <h1 className="mb-4  w-full text-2xl font-semibold text-slate-900">HDRUK Datasets</h1>
       <input className="mb-4 w-full rounded border border-slate-200 p-2"
         type="text"
-        placeholder="Search datasets..."
+        placeholder="Search HDR UK datasets..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
