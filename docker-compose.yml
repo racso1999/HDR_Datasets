@@ -4,6 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: hdr-datasets:latest
+    pull_policy: never
     container_name: hdr-datasets-app
     ports:
       - "3001:3000"
