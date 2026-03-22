@@ -1,4 +1,5 @@
 'use client' //  client component
+import { searchDatasets } from '../lib/searchengine'
 import { useEffect, useState } from 'react'
 export default function Home() { // State to hold the datasets and loading status
 
@@ -19,6 +20,8 @@ export default function Home() { // State to hold the datasets and loading statu
   if (loading) { // Show loading state while fetching data
     return <div>Fetching Data...</div>
   }
+  const testResult = searchDatasets(datasets, "cov")
+  console.log(testResult)
 
   return ( // Render the datasets in a table format HTML structure
     <main className="min-h-screen bg-white-500 p-8 text-slate-900">
@@ -33,7 +36,7 @@ export default function Home() { // State to hold the datasets and loading statu
           </tr>
         </thead>
         <tbody>
-          {datasets.map((dataset: any, index: number) => (
+          {testResult.map((dataset: any, index: number) => (
             <tr key={`${dataset?.id ?? 'row'}-${index}`}>
               <td className="border border-slate-200 p-3 align-top">{dataset.title}</td>
               <td className="border border-slate-200 p-3 align-top">{dataset.description}</td>
@@ -46,4 +49,3 @@ export default function Home() { // State to hold the datasets and loading statu
     </main>
   )
 }
-
