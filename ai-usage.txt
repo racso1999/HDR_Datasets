@@ -1,37 +1,8 @@
-AI USAGE DISCLOSURE
-===================
+AI Usage Prompts
+================
 
-Tool: GitHub Copilot (Claude Sonnet 4.6)
+Model used: Claude Sonnet
 Date: 22 March 2026
 
-Prompts used:
--------------
-1. Check if app/api/datasets/route.ts is empty.
-
-2. Fix the following Next.js errors: default export detected in route.ts — 
-   export a named export for each HTTP method instead; no HTTP methods exported.
-
-3. Where was the original route.ts implementation located?
-
-4. Remove the duplicate nested directory.
-
-5. Check the syntax of page.tsx.
-
-6. Review page.tsx again — the goal is to render a data table.
-
-7. There is a server/client mismatch; the loading text was changed to "Fetching Data".
-
-8. Generate an AI usage disclosure .txt file listing the tool and prompts used.
-
-Actions taken by AI:
---------------------
-- Identified that app/api/datasets/route.ts was empty
-- Copied the correct GET handler (with named export) from the accidentally nested 
-  duplicate file at app/api/datasets/app/api/datasets/route.ts into the correct location
-- Deleted the nested duplicate directory app/api/datasets/app/
-- Fixed a broken default import of useEffect in page.tsx (should be a named import)
-  and removed unused 'use' import
-- Moved table JSX that had been placed outside the component return statement 
-  back inside the return, and added correct TypeScript types
-- Confirmed the "Fetching Data..." loading text was already correct and no 
-  server/client mismatch existed
+1) Explain basic search functions for HTML tables from first principles. Keep it concise. Cover how matching works step-by-step, simple case-insensitive text matching, and one minimal example using plain JavaScript.
+2) Break down table pagination in HTML from first principles. Keep it concise. Include simple JavaScript example.
