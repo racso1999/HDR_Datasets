@@ -1,8 +1,8 @@
-'use client' // This is a client component
+'use client' //  client component
 import { useEffect, useState } from 'react'
 export default function Home() { // State to hold the datasets and loading status
 
-  const [datasets, setDatasets] = useState([])  
+  const [datasets, setDatasets] = useState([]) // State to hold the datasets and loading status
   const [loading, setLoading] = useState(true) 
 
   useEffect(() => {
@@ -21,24 +21,24 @@ export default function Home() { // State to hold the datasets and loading statu
   }
 
   return ( // Render the datasets in a table format HTML structure
-    <main>
-      <h1>HDR UK Datasets</h1>
-      <table>
+    <main className="min-h-screen bg-white-500 p-8 text-slate-900">
+      <h1 className="mb-4  w-full text-2xl font-semibold text-slate-900">HDRUK Datasets</h1>
+      <table className="w-full border border-slate-200 bg-white text-sm text-slate-900">
         <thead>
-          <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Access Category</th>
-            <th>Access Rights</th>
+          <tr className="bg-slate-100 text-slate-800">
+            <th className="border border-slate-200 p-3 text-left">Title</th>
+            <th className="border border-slate-200 p-3 text-left">Description</th>
+            <th className="border border-slate-200 p-3 text-left">Access Category</th>
+            <th className="border border-slate-200 p-3 text-left">Accesss Rights</th>
           </tr>
         </thead>
         <tbody>
           {datasets.map((dataset: any, index: number) => (
-            <tr key={index}>
-              <td>{dataset.title}</td>
-              <td>{dataset.description}</td>
-              <td>{dataset.accessServiceCategory}</td>
-              <td>{dataset.accessRights}</td>
+            <tr key={`${dataset?.id ?? 'row'}-${index}`}>
+              <td className="border border-slate-200 p-3 align-top">{dataset.title}</td>
+              <td className="border border-slate-200 p-3 align-top">{dataset.description}</td>
+              <td className="border border-slate-200 p-3 align-top">{dataset.accessServiceCategory}</td>
+              <td className="border border-slate-200 p-3 align-top max-w-xs break-words">{dataset.accessRights}</td>
             </tr>
           ))}
         </tbody>
