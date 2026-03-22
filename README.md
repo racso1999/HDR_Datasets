@@ -4,7 +4,7 @@ Here is my web application, which displays all of the raw data in an HTML table.
 
 I wanted to showcase a fast, lightweight solution to the problem with no unnecessary features. I kept AI usage to a minimum (see `ai-usage.txt`) to demonstrate foundational knowledge of JavaScript and Next.js.
 
-I built a quick tokenised search engine where Terms are matched based on individual word matches. This creates an intuitve filtering workflow and keeps things slick.
+I built a quick tokenised search engine where terms are matched based on individual word matches. This creates an intuitve filtering workflow and keeps things slick.
 
 
 ## Docker Quick Start
