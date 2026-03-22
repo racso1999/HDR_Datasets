@@ -3,6 +3,6 @@ AI Usage Prompts
 Date: 22 March 2026
 
 1) [Model: Claude Sonnet (external)] Explain basic search functions for HTML tables from first principles. Keep it concise. Cover how matching works step-by-step, simple case-insensitive text matching, and one minimal example using plain JavaScript.
-2) [Model: Claude Sonnet (external)] Break down table pagination in HTML from first principles. Keep it concise. Include simple JavaScript example.
-3) [Model: GitHub Copilot - GPT-5.3-Codex] Audit the workspace for bloat and remove only clearly unused files for efficiency. Confirm references before deletion and run lint after cleanup.
-4) [Model: GitHub Copilot - GPT-5.3-Codex] Run lint and check for errors, then report remaining issues.
+2) [Model: GitHub Copilot - GPT-5.3-Codex] Audit the workspace for bloat and remove only clearly unused files for efficiency. Confirm references before deletion and run lint after cleanup.
+3) [Model: GitHub Copilot - GPT-5.3-Codex] Run lint and check for errors, then report remaining issues.
+4) [Model: GitHub Copilot - GPT-5.3-Codex] Check Dockerfile and report any errors.
